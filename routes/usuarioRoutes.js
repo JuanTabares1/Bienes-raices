@@ -3,6 +3,7 @@ import { formularioLogin, autenticar, cerrarSesion, formularioRegistro, registra
 
 const router = express.Router();
 
+//Iniciar sesion
 router.get('/login', formularioLogin);
 router.post('/login', autenticar);
 
@@ -14,8 +15,8 @@ router.post('/registro', registrar)
 
 router.get('/confirmar/:token', confirmar)
 
-router.get('/olvide-password', formularioOlvidePassword )
-router.post('/olvide-password', resetPassword )
+router.get('/olvide-password', formularioOlvidePassword)
+router.post('/olvide-password', resetPassword)
 
 // Almacena el nuevo password
 router.get('/olvide-password/:token', comprobarToken);
